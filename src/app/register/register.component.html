@@ -1,0 +1,86 @@
+<section>
+  <img />
+  <h1>การรับสมัครบุคคลเพื่อเข้าศึกษาของสำนักวิชาศาสตร์และศิลป์ดิจิทัล</h1>
+  <div class="body">
+    <div class="header">
+      <h1>ข้อมูลผู้สมัคร</h1>
+    </div>
+    <div class="question">
+      <div>
+        <p>ชื่อ-นามสกุล</p>
+        <div class="input-field">
+          <select [(ngModel)]="nameTitle">
+            <option value="0" selected disabled>คำนำหน้า</option>
+            <option value="นาย">นาย</option>
+            <option value="นาง">นาง</option>
+            <option value="นางสาว">นางสาว</option>
+          </select>
+          <input placeholder="ชื่อ" type="text" [(ngModel)]="firstName" />
+          <input placeholder="นามสกุล" type="text" [(ngModel)]="lastName" />
+        </div>
+      </div>
+
+      <div>
+        <p>วัน/เดือน/ปี เกิด</p>
+        <div class="input-field">
+          <input type="date" [(ngModel)]="birthDate" />
+        </div>
+      </div>
+
+      <div>
+        <p>รหัสประจำตัวประชาชน</p>
+        <div class="input-field">
+          <input type="text" [(ngModel)]="pid" />
+        </div>
+      </div>
+
+      <div>
+        <p>เบอร์โทรศัพท์</p>
+        <div class="input-field">
+          <input type="text" [(ngModel)]="tel" />
+        </div>
+      </div>
+      <div>
+        <p>e-mail</p>
+        <div class="input-field">
+          <input type="text" [(ngModel)]="email" />
+        </div>
+      </div>
+
+      <div>
+        <p>ที่อยู่</p>
+        <div class="input-field">
+          <input type="text" [(ngModel)]="address" />
+        </div>
+      </div>
+    </div>
+
+    <div class="header">
+      <h1>วุฒิการศึกษา</h1>
+    </div>
+    <div class="question">
+      <div>
+        <p>GPAX</p>
+        <div class="input-field">
+          <input
+            type="number"
+            min="2.75"
+            max="4.00"
+            step="0.01"
+            [(ngModel)]="gpax"
+          />
+        </div>
+      </div>
+
+      <div>
+        <p>สำเร็จการศึกษาจากโรงเรียน</p>
+        <div class="input-field">
+          <input type="text" [(ngModel)]="school" />
+        </div>
+      </div>
+    </div>
+    <div class="footer" (click)="submitForm()">
+      <button>ส่งข้อมูลการสมัคร</button>
+    </div>
+  </div>
+</section>

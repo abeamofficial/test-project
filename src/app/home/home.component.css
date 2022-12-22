@@ -1,0 +1,20 @@
+section {
+    background-color: #efefef;
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+}
+
+
+section>div {
+    margin: auto;
+    background-color: rgb(126, 184, 202);
+    border-radius: 100px;
+    border: unset;
+    padding: 1rem 3rem;
+}
+
+section>div>p {
+    margin: auto;
+    font-size: 2rem;
+}
